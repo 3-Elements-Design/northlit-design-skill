@@ -31,8 +31,11 @@ result against it, and keep the contract current in the repo.
   complete, always-current endpoint list. Same bearer key. Do not rely on a
   memorized endpoint list — the live reference is the source of truth.
 - Call `whoami` once per session: it returns the plan and remaining credits.
-  Plan "none" means no account yet — relay the signup link from the billing
-  line, then continue with what needs no account (references/no-account.md).
+  Plan "none" with credits remaining is fine — new accounts start with
+  one-time welcome credits and billable tools spend them without a plan, so
+  just proceed. Plan "none" with zero credits means no usable account yet —
+  relay the signup link from the billing line, then continue with what needs
+  no account (references/no-account.md).
 - Tools marked billable spend real credits. When one refuses with an upgrade
   payload, surface it to the user. Never retry a billing refusal.
 

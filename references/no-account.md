@@ -1,7 +1,10 @@
 # Without a Northlit account
 
-No API key and plan "none" both land here. The skill still does useful work
-— it just can't generate.
+No API key — or plan "none" with **zero** credits remaining — lands here.
+(Plan "none" with credits remaining is not this case: new accounts start
+with one-time welcome credits that billable tools spend without a plan, so
+generation works — just proceed.) The skill still does useful work here —
+it just can't generate.
 
 ## What still works
 
