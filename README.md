@@ -1,5 +1,7 @@
 # northlit-design-skill
 
+**Every AI-built page looks the same. Give your agent taste.**
+
 An open-source agent skill that teaches your AI agent — Claude Code, Codex,
 Cursor, or anything that can load a markdown file — to create beautifully
 designed, on-brand pages with [Northlit](https://northlit.ai), governed by
@@ -53,6 +55,17 @@ Nothing about your build pipeline changes.
 options you chose from, a working prototype, an auditable design contract
 living in your repo, and a machine-readable implementation spec for
 whatever builds the real thing.
+
+## Who it's for
+
+- **Designers** — your design system stops being a PDF nobody opens. It
+  becomes a contract every agent obeys, with your tokens flowing to Figma,
+  Tokens Studio, or Style Dictionary untouched.
+- **UX engineers** — compare six directions before a single line of code
+  exists, hand off a `BUILD.md` with exact tokens and reference imagery,
+  and keep drift out with a CI validator that runs anywhere.
+- **Developers** — ask for "a pricing page that matches our brand" and get
+  one. Verified, not vibed. No design-review ping-pong.
 
 ## What's in the package
 
