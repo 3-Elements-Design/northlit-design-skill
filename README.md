@@ -17,6 +17,43 @@ verify the output against it mechanically, and keep the contract current in
 your repo — so every future agent, in every harness, inherits your design
 decisions.
 
+## Why use it
+
+**Coding agents one-shot UI into the same generic look.** Ask five agents
+for a landing page and you get five variations of the same cream hero,
+gradient button, and centered card grid. Design context alone measurably
+helps — Vercel's matched tests of their
+[design.md](https://vercel.com/blog/how-our-agents-build-on-brand-pages-with-design-md)
+showed 57% fewer deterministic design failures — and this skill goes
+further than context in three ways:
+
+- **Exploration before code.** Instead of prompt-roulette on generated
+  code, the skill runs one Northlit exploration and puts genuinely
+  divergent direction mocks side by side — cheap images, minutes, on a
+  shareable board. You choose a direction with your eyes, then commit to a
+  build.
+- **Verification instead of vibes.** "On-brand" becomes checkable: every
+  token reference must resolve, exported tokens are diffed against your
+  repo's, and each divergence is classified as drift (gets fixed) or
+  evolution (gets documented). The agent reports what it checked, not what
+  it hopes.
+- **A contract that compounds.** The loop ends by writing `DESIGN.md` and
+  `design/tokens.json` back to your repo as a proposed change. From then
+  on, every agent in every harness inherits your design decisions — and the
+  bundled validator keeps the file honest in CI.
+
+**It slots into the process you already have.** Northlit sits upstream as
+the design brain; your coding agent stays the implementer, handed a
+`BUILD.md` with exact tokens, reference imagery, and precedence rules.
+Design tokens export as W3C DTCG for Figma Variables, Tokens Studio, or
+Style Dictionary; prototypes publish to a URL for stakeholder review.
+Nothing about your build pipeline changes.
+
+**What you get at the end** is four artifacts, not one: the explored
+options you chose from, a working prototype, an auditable design contract
+living in your repo, and a machine-readable implementation spec for
+whatever builds the real thing.
+
 ## What's in the package
 
 ```
