@@ -94,7 +94,10 @@ Before generating anything:
 ### 3 · Build
 
 - `list_directions`, then confirm the pick with the user — builds take
-  minutes and spend credits.
+  minutes and spend credits. Where the `present_board` tool is available
+  (newer servers), call it first: one side-by-side grid of the board beats
+  viewing mocks one at a time, and its cell → direction mapping is what you
+  quote when asking for the pick.
 - `build_prototype`, poll `check_progress`, inspect with `read_prototype` /
   `read_prototype_html`.
 - Iterate with `edit_prototype`, one focused change per call. Each edit is a
