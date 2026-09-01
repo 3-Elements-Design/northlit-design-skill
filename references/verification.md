@@ -24,15 +24,22 @@ results; never assert adherence you didn't check.
 
 ## 3 · Judgment review (model-graded, honest about it)
 
+- Where available, call `critique_design` on the chosen card (billable): it
+  returns 0–100 rubric scores (overall, hierarchy, typography, color,
+  layout, content), severity-ranked issues each with a concrete fix, and a
+  single refine-ready `fixPrompt`. Report the scores and top issues; offer
+  the fixPrompt as a next iteration — never apply it unasked. On older
+  servers the tool is absent — fall through to the manual review below.
 - Re-read the DESIGN.md prose sections (and the locked brand's voice and
   anti-defaults). Walk the built page against each "Do's and Don'ts" entry
   and each named anti-pattern; quote the section next to anything that
   violates it.
-- This tier is opinion, not measurement. Say so in your report, and keep it
-  separate from the deterministic results above.
+- This tier is opinion, not measurement — critique scores included. Say so
+  in your report, and keep it separate from the deterministic results above.
 
 ## What this protocol does not cover (yet)
 
-Northlit's conformance rule engine is not exposed over the API. Until it
-is, adherence scoring here = reference integrity + token diff + judgment
-review. Do not imply a numeric adherence score exists.
+Northlit's conformance rule engine is not exposed over the API. Adherence
+here = reference integrity + token diff + the model-graded review. The
+critique score is a quality judgment, not a brand-adherence measurement —
+do not present one as the other.

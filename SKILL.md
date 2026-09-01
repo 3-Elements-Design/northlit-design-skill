@@ -108,6 +108,11 @@ references/verification.md):
   present). List every divergence and classify it: intentional evolution or
   drift. Drift gets fixed with `edit_prototype`; evolution gets written back
   in step 5.
+- Where the `critique_design` tool is available (newer servers), run it on
+  the chosen card: report the 0–100 scores and the top issues, labeled as
+  **model-graded judgment** — keep them separate from the deterministic
+  checks above. Offer the returned fixPrompt as a next iteration
+  (`generate_variations` / `edit_prototype`); never auto-run it. Billable.
 - Run `scripts/validate-design-md.mjs` on any DESIGN.md you wrote.
 
 ### 5 · Write the contract back
