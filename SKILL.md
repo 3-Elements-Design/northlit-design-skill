@@ -59,6 +59,11 @@ Before generating anything:
 - Read the repo's `DESIGN.md` **in full** (repo root, then `docs/DESIGN.md`).
   Never work from a summary of it. Note its tokens (frontmatter) and its
   judgment (prose sections) separately — they feed different steps.
+- **No DESIGN.md yet? That's normal — proceed.** The repo's existing theme
+  files, tokens, and component styles are the interim contract (mine them
+  the way references/no-account.md describes), and step 5 writes the first
+  DESIGN.md at the end of the loop. Say in your reply that this run will
+  bootstrap the contract.
 - `list_brands` → `read_brand` for the active brand. Note `locked`,
   `logoInGen`, the palette, voice, and anti-defaults. Logo honesty: the real
   logo file only enters image generation when `locked` AND `logoInGen` are
