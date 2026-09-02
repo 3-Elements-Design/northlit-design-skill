@@ -81,6 +81,24 @@ examples/
   acme.design.md                  a minimal valid DESIGN.md
 ```
 
+## One prompt, any agent
+
+Paste this into whatever agent you use — Claude Code, Codex, ChatGPT, Cursor,
+VS Code — and it connects Northlit the right way for itself, installs this
+skill, and confirms the connection:
+
+```text
+Set up Northlit for me in this environment and confirm it works. Northlit is an AI design studio (boards of design-direction mocks, working HTML prototypes, images, video) exposed as an MCP server.
+
+1. Connect the Northlit MCP server — remote HTTP at https://northlit.ai/api/mcp, OAuth 2.1 with dynamic client registration (a browser sign-in; no keys to paste). Use the route for the agent you are:
+   - Claude Code: run `claude mcp add --transport http northlit https://northlit.ai/api/mcp` — or install the plugin with `/plugin marketplace add 3-Elements-Design/northlit-claude-plugin` then `/plugin install northlit@northlit`.
+   - Codex CLI: run `codex plugin marketplace add 3-Elements-Design/northlit-codex`, then install Northlit from `/plugins` (or `codex mcp add northlit --url https://northlit.ai/api/mcp` then `codex mcp login northlit`).
+   - ChatGPT: open Plugins, search "Northlit" and install it (or Plugins → + New Plugin with the server URL https://northlit.ai/api/mcp).
+   - Cursor, VS Code, Windsurf, Gemini CLI or any other MCP client: add an HTTP MCP server named `northlit` with the URL https://northlit.ai/api/mcp. If the client cannot do OAuth, create an API key at https://northlit.ai/settings/api and send it as `Authorization: Bearer <key>`.
+2. Install the northlit-design skill so design work follows my brand and my repo's DESIGN.md: clone https://github.com/3-Elements-Design/northlit-design-skill into your skills directory (Claude Code: `.claude/skills/northlit-design`; other agents: load its SKILL.md as context).
+3. Verify: call the `whoami` tool (my plan and credits) and `getting_started`, then tell me what you found and how to start my first exploration. If I have no Northlit account yet, point me to https://northlit.ai — new accounts start with free credits.
+```
+
 ## Install
 
 **Claude Code** — copy the folder into your project or home skills
